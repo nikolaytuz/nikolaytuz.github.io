@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Log Push</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <div>Мана: <span id="manaText">0</span></div>
+      <div id="manaContainer"><div id="manaBar"></div></div>
+      <div>
+        <button id="unitBtn">Unit (5)</button>
+        <button id="buildingBtn">Building (10)</button>
+      </div>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <div id="overlay">
+      <div id="overlayText"></div>
+      <button id="newGame">Новая игра</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
+
