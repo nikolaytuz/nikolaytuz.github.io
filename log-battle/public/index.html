@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Log Battle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="mana">Mana: 0</div>
+    <button id="unitBtn">Unit (5)</button>
+    <button id="buildingBtn">Building (10)</button>
+    <span>Selected: <span id="selectedCard">unit</span></span>
+  </div>
+  <canvas id="game"></canvas>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
