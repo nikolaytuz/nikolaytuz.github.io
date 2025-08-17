@@ -9,6 +9,7 @@ export const state = {
   countdown: CONFIG.countdownSec,
   winner: null,
   message: null,
+
 };
 
 export let playerId = null;
@@ -29,6 +30,7 @@ export function applyServerState(s) {
   state.countdown = s.countdown;
   state.winner = s.winner || null;
   state.message = s.message || null;
+
 }
 
 export function myMana() {

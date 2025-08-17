@@ -36,6 +36,7 @@ const state = {
   countdown: CONFIG.countdownSec,
   winner: null,
   message: null,
+
 };
 
 // ---- helpers ----
@@ -51,12 +52,14 @@ function resetForNewGame() {
   state.countdown = CONFIG.countdownSec;
   Object.values(state.players).forEach((p) => (p.mana = 0));
   state.message = null;
+
 }
 
 function startCountdown() {
   state.phase = 'countdown';
   state.countdown = CONFIG.countdownSec;
   state.message = null;
+
 }
 
 function regenMana() {
@@ -158,6 +161,7 @@ function sendState() {
     log: state.log,
     winner: state.winner,
     message: state.message,
+
   });
 }
 
@@ -260,6 +264,7 @@ io.on('connection', (socket) => {
     delete state.players[socket.id];
     state.phase = 'waiting';
     state.message = 'Противник покинул игру';
+
     sendState();
   });
 });
