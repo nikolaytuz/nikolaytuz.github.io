@@ -246,7 +246,8 @@ function render() {
   overlay.classList.remove('visible');
   newGameBtn.style.display = 'none';
   if (state.phase === 'waiting') {
-    overlayText.textContent = 'Ожидание второго игрока…';
+    overlayText.textContent = state.message || 'Ожидание второго игрока…';
+
     overlay.classList.add('visible');
   } else if (state.phase === 'countdown') {
     overlayText.textContent = state.countdown;

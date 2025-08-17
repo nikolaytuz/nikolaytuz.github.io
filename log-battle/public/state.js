@@ -8,6 +8,8 @@ export const state = {
   log: { x: 0, y: 0, jitter: 0 },
   countdown: CONFIG.countdownSec,
   winner: null,
+  message: null,
+
 };
 
 export let playerId = null;
@@ -27,6 +29,8 @@ export function applyServerState(s) {
   state.log = s.log || state.log;
   state.countdown = s.countdown;
   state.winner = s.winner || null;
+  state.message = s.message || null;
+
 }
 
 export function myMana() {
