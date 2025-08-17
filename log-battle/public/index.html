@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Log Battle</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<title>Log Push</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="ui">
-    <div id="mana">Mana: 0</div>
-    <button id="unitBtn">Unit (5)</button>
-    <button id="buildingBtn">Building (10)</button>
-    <span>Selected: <span id="selectedCard">unit</span></span>
+<div id="ui">
+  <div id="mana"><span id="manaNum">0</span>
+    <div id="manaBar"><div id="manaFill"></div></div>
   </div>
-  <canvas id="game"></canvas>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="client.js"></script>
+  <div id="cards">
+    <button id="card-unit">Unit (5)</button>
+    <button id="card-building">Building (10)</button>
+  </div>
+</div>
+<canvas id="game"></canvas>
+<div id="overlay"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script type="module" src="game.js"></script>
 </body>
 </html>
